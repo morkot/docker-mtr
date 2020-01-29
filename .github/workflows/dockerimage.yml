@@ -13,10 +13,10 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag morkot/mtr:latest
     
-    - name: Logon to Dockerhub
+    - name: Login to Dockerhub
       env:
         DOCKER_HUB_TOKEN: ${{ secrets. DOCKER_HUB_TOKEN}}
-      run: docker login --username morkot --password ${DOCKER_HUB_TOKEN}
+      run: echo ${DOCKER_HUB_TOKEN} | docker login --username morkot --password-stdin
     
-    - name: Push the Docker image
+    - name: Push the Docker image to Dockerhub
       run: docker push morkot/mtr:latest
