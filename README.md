@@ -2,6 +2,8 @@
 
 [MTR](https://linux.die.net/man/8/mtr) tool simply dockerized
 
+![Docker Image CI](https://github.com/morkot/docker-mtr/workflows/Docker%20Image%20CI/badge.svg)
+
 ## Usage
 
 1. Pull the image
