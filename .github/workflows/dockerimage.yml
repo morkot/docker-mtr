@@ -20,3 +20,6 @@ jobs:
     
     - name: Push the Docker image
       run: docker push morkot/mtr:latest
+    
+    - name: Clean docker creds and stuff
+      run: rm -rf /home/runner/.docker/
